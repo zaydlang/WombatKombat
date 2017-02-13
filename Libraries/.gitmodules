@@ -1,0 +1,6 @@
+[submodule "n4e"]
+	path = n4e
+	url = https://github.com/0xFireball/n4e.git
+[submodule "n4"]
+	path = n4
+	url = https://github.com/0xFireball/n4.git
