@@ -17,7 +17,6 @@ class PlayState extends NState {
 		enemy = new Enemy(NGame.width / 3, NGame.height / 3);
 		add(enemy);
 
-
         super.create();
     }
 }
