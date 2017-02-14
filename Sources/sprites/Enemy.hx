@@ -9,6 +9,10 @@ import n4.math.NPoint;
 import n4.math.NVector;
 import n4.math.NAngle;
 
+import n4.util.NColorUtil;
+
+import n4.effects.particles.NParticleEmitter;
+
 class Enemy extends NSprite {
     private var speed:Float = 10;
 
@@ -32,6 +36,12 @@ class Enemy extends NSprite {
         movement();
         // call the base update
         super.update(dt);
+
+        Registry.PS.emitter
+            .emitSquare(x + 20, y + 20, 16, NParticleEmitter.velocitySpread(50),
+				NColorUtil.randCol(0, 0, 255),
+				0.3
+			);
     }
 
     private function movement() {

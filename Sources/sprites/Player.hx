@@ -30,8 +30,8 @@ class Player extends NSprite {
     override public function update(dt:Float) {
         // particles
         Registry.PS.emitter
-			.emitSquare(x, y, 3, NParticleEmitter.velocitySpread(50),
-				NColorUtil.randCol(0.7, 0, 0),
+			.emitSquare(x + 10, y + 10, 8, NParticleEmitter.velocitySpread(50),
+				NColorUtil.randCol(0, 255, 0),
 				0.3
 			);
 

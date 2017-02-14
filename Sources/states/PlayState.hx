@@ -18,6 +18,8 @@ class PlayState extends NState {
 		add(player);
 		enemy = new Enemy(NGame.width / 3, NGame.height / 3);
 		add(enemy);
+		enemy = new Enemy(NGame.width * 2 / 3, NGame.height * 2 / 3);
+		add(enemy);
 
 		// for particles
 		emitter = new NParticleEmitter(240);
