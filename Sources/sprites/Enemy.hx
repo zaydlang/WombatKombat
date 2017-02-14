@@ -15,6 +15,7 @@ import n4.effects.particles.NParticleEmitter;
 
 class Enemy extends NSprite {
     private var speed:Float = 10;
+    private var speedInaccuracy:Float = 2;
 
     public function new(?X:Float = 0, ?Y:Float = 0) {
         // Define a constructor for Player matching the base constructor
@@ -39,7 +40,7 @@ class Enemy extends NSprite {
 
         Registry.PS.emitter
             .emitSquare(x + 20, y + 20, 16, NParticleEmitter.velocitySpread(50),
-				NColorUtil.randCol(0, 0, 255),
+				NColorUtil.randCol(0, 255, 0),
 				0.3
 			);
     }
@@ -49,7 +50,8 @@ class Enemy extends NSprite {
 
         // move toward player
         var posVelocity = new NVector(x, y).subtractPoint(new NPoint(player.x, player.y))
-            .toVector().normalize().scale(speed).rotate(new NPoint(0, 0), 180);
+            .toVector().normalize().scale(Math.random() * speedInaccuracy + speed)
+            .rotate(new NPoint(0, 0), 180);
         velocity.add(posVelocity.x, posVelocity.y);
     }
 }
