@@ -20,9 +20,9 @@ class Enemy extends NSprite {
 		makeGraphic(40, 40, Color.Blue);
 
         // set movement drag (this is like friction)
-        drag.set(80, 80);
+        drag.set(5, 5);
         // set a maximum velocity
-        maxVelocity.set(100, 100);
+        maxVelocity.set(200, 200);
 
 		angularVelocity = Math.PI / 2;
     }
@@ -37,8 +37,9 @@ class Enemy extends NSprite {
     private function movement() {
         var player = Registry.PS.player;
 
+        // move toward player
         var posVelocity = new NVector(x, y).subtractPoint(new NPoint(player.x, player.y))
-            .toVector().normalize().scale(speed).rotate(new NPoint(x, y), 180);
+            .toVector().normalize().scale(speed).rotate(new NPoint(0, 0), 180);
         velocity.add(posVelocity.x, posVelocity.y);
     }
 }
