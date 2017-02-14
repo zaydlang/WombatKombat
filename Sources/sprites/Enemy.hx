@@ -14,8 +14,8 @@ import n4.util.NColorUtil;
 import n4.effects.particles.NParticleEmitter;
 
 class Enemy extends NSprite {
-    private var speed:Float = 10;
-    private var speedInaccuracy:Float = 2;
+    private var speedInaccuracy:Float = Math.random();
+    private var speed:Float = 5;
 
     public function new(?X:Float = 0, ?Y:Float = 0) {
         // Define a constructor for Player matching the base constructor
@@ -25,9 +25,9 @@ class Enemy extends NSprite {
 		makeGraphic(40, 40, Color.Blue);
 
         // set movement drag (this is like friction)
-        drag.set(5, 5);
+        drag.set(Math.random() * 4 + 1, Math.random() * 4 + 1);
         // set a maximum velocity
-        maxVelocity.set(200, 200);
+        maxVelocity.set(Math.random() * 50 + 150, Math.random() * 50 + 150);
 
 		angularVelocity = Math.PI / 2;
     }
@@ -50,7 +50,7 @@ class Enemy extends NSprite {
 
         // move toward player
         var posVelocity = new NVector(x, y).subtractPoint(new NPoint(player.x, player.y))
-            .toVector().normalize().scale(Math.random() * speedInaccuracy + speed)
+            .toVector().normalize().scale(5 * speedInaccuracy + speed)
             .rotate(new NPoint(0, 0), 180);
         velocity.add(posVelocity.x, posVelocity.y);
     }
