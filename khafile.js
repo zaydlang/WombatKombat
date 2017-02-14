@@ -1,4 +1,4 @@
-let project = new Project('Wombat Combat');
+let project = new Project('Wombat Kombat');
 project.addAssets('Assets/**');
 project.addSources('Sources');
 project.addLibrary('n4');

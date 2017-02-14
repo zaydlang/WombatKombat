@@ -13,7 +13,7 @@ class MenuState extends NState {
         // TODO: Add some stuff to our menu state
 
 		//Display title
-		var titleText = new NEText(0, NGame.height / 3, "Wombat Combat", 60);
+		var titleText = new NEText(0, NGame.height / 3, "Wombat Kombat", 60);
 		titleText.screenCenter(NAxes.X);
 		add(titleText);
 	

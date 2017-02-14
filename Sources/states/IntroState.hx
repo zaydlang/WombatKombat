@@ -17,7 +17,7 @@ class IntroState extends NState {
   			NEText.defaultFont = Assets.fonts.Raleway;
 		}
 		
-		var titleText = new NEText(20, 20, "Wombat Combat", 35, Color.White);
+		var titleText = new NEText(20, 20, "Wombat Kombat", 35, Color.White);
 		add(titleText);
 
 		var spinner = new NSprite();
