@@ -6,6 +6,10 @@ import n4.entities.NSprite;
 import n4.NGame;
 import n4.math.NPoint;
 
+import n4.util.NColorUtil;
+
+import n4.effects.particles.NParticleEmitter;
+
 class Player extends NSprite {
     private var speed:Float = 10;
 
@@ -14,17 +18,23 @@ class Player extends NSprite {
         super(X, Y);
 
         // Create a 20x20 blue square as the image
-		makeGraphic(40, 40, Color.Red);
+		makeGraphic(20, 20, Color.Red);
 
         // set movement drag (this is like friction)
         drag.set(5, 5);
         // set a maximum velocity
         maxVelocity.set(200, 200);
-
 		angularVelocity = Math.PI / 2;
     }
 
     override public function update(dt:Float) {
+        // particles
+        Registry.PS.emitter
+			.emitSquare(x, y, 3, NParticleEmitter.velocitySpread(50),
+				NColorUtil.randCol(0.7, 0, 0),
+				0.3
+			);
+
         // call our movement function
         movement();
         // call the base update
