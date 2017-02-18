@@ -14,4 +14,5 @@ import n4.util.NColorUtil;
 import n4.effects.particles.NParticleEmitter;
 
 class Enemy extends NSprite {
+	public var type:Int;
 }

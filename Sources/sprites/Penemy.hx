@@ -1,4 +1,4 @@
-/*package sprites;
+package sprites;
 
 import kha.Color;
 
@@ -13,7 +13,7 @@ import n4.util.NColorUtil;
 
 import n4.effects.particles.NParticleEmitter;
 
-class EnemyStage3 extends Enemy {
+class Penemy extends Enemy {
     private var speedInaccuracy:Float = Math.random();
     private var speed:Float = 5;
 
@@ -22,13 +22,15 @@ class EnemyStage3 extends Enemy {
         // Define a constructor for Player matching the base constructor
         super(X, Y);
 
+        type = 2;
+
         // Create a 20x20 blue square as the image
-		makeGraphic(40, 40, Color.fromFloats(0.9, 0.9, 0.1));
+		makeGraphic(5, 5, Color.fromFloats(0.1, 0.9, 0.4));
 
         // set movement drag (this is like friction)
         drag.set(Math.random() * 5 + 30, Math.random() * 5 + 30);
         // set a maximum velocity
-        maxVelocity.set(Math.random() * 50 + 75, Math.random() * 50 + 75);
+        maxVelocity.set(Math.random() * 50 + 280, Math.random() * 50 + 280);
 
 		angularVelocity = Math.PI / 2;
     }
@@ -41,20 +43,9 @@ class EnemyStage3 extends Enemy {
 
         Registry.PS.emitter
             .emitSquare(x + 2.5, y + 2.5, 16, NParticleEmitter.velocitySpread(width * 2),
-				NColorUtil.randCol(0.9, 0.9, 0.1, 0.1),
+				NColorUtil.randCol(0.1, 0.9, 0.4, 0.1),
 				0.3
 			);
-        
-        makeGraphic(width - 0.1, height - 0.1, Color.fromFloats(0.9, 0.9, 0.1));
-
-       if (width == 10) {
-            var shploo = new EnemyStage2(x + 5, y + 5);
-			add(shploo);
-            var sclood = new EnemyStage2(x - 5, y - 5);
-			add(sclood); 
-
-            destroy();
-        }
     }
 
     private function movement() {
@@ -72,4 +63,4 @@ class EnemyStage3 extends Enemy {
 		var minDistance = 2;
 		return target;
 	}
-}*/
+}

@@ -14,7 +14,7 @@ import sprites.*;
 
 class PlayState extends NState {
 	public var player:Player;
-	private var _enemies:NTypedGroup<Enemy>;
+	public var _enemies:NTypedGroup<Enemy>;
 
 	public var enemiesKilled:Int = 0;
 	private var frameCounter:Float = 0;
@@ -66,13 +66,14 @@ class PlayState extends NState {
 		spawnTimer += dt;
 		if (spawnTimer >= spawnTime) {
 			spawnTimer = 0;
-			if (enemyCounter < Math.random() * 3 + (enemiesKilled < 10 ? 5 : 15)) {
+			if (enemyCounter < Math.random() * 3 + (enemiesKilled < 10 ? 5
+			 : 15)) {
 				if (enemiesKilled < 9 || Math.random() >= ((enemiesKilled - 10) * 0.075) + 0.25) {
-					var shenemy = new EnemyStage1(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
+					var shenemy = new EnemyStage3(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
 						NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10); // don't ask about shenemy
 					_enemies.add(shenemy);
 				} else {
-					var shenemy = new EnemyStage2(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
+					var shenemy = new Penemy(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
 						NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10); // don't ask about shenemy
 					_enemies.add(shenemy); 
 				}
@@ -130,6 +131,7 @@ class PlayState extends NState {
 					0.8
 				);
 		}
+
 		for (i in 0...27) {
 			Registry.PS.emitter
 				.emitSquare(b.x, b.y, 9, NParticleEmitter.velocitySpread(75, 
@@ -150,6 +152,16 @@ class PlayState extends NState {
 
 		b.destroy();
 		p.destroy();
+
+		if (b.type == 3) {
+			var sloomoo = new Penemy(b.x + b.width / 2, b.y + b.width / 2);
+            _enemies.add(sloomoo);
+		}
+
+		if (p.type == 3) {
+			var poomoo = new Penemy(p.x + p.width / 2, p.y + p.width / 2);
+            _enemies.add(poomoo);
+		}
 
 		enemiesKilled += 2;
 	}

@@ -13,7 +13,7 @@ import n4.util.NColorUtil;
 
 import n4.effects.particles.NParticleEmitter;
 
-class EnemyStage2 extends Enemy {
+class EnemyStage3 extends Enemy {
     private var speedInaccuracy:Float = Math.random();
     private var speed:Float = 5;
 
@@ -22,15 +22,17 @@ class EnemyStage2 extends Enemy {
         // Define a constructor for Player matching the base constructor
         super(X, Y);
 
+        type = 3;
+
         // Create a 20x20 blue square as the image
-		makeGraphic(5, 5, Color.fromFloats(0.1, 0.9, 0.4));
+		makeGraphic(60, 60, Color.fromFloats(0.9, 0.9, 0.1));
 
         // set movement drag (this is like friction)
         drag.set(Math.random() * 5 + 30, Math.random() * 5 + 30);
         // set a maximum velocity
-        maxVelocity.set(Math.random() * 50 + 280, Math.random() * 50 + 280);
+        maxVelocity.set(Math.random() * 50 + 275, Math.random() * 50 + 275);
 
-		angularVelocity = Math.PI / 2;
+		angularVelocity = Math.PI * 3;
     }
 
     override public function update(dt:Float) {
@@ -40,10 +42,26 @@ class EnemyStage2 extends Enemy {
         super.update(dt);
 
         Registry.PS.emitter
-            .emitSquare(x + 2.5, y + 2.5, 16, NParticleEmitter.velocitySpread(width * 2),
-				NColorUtil.randCol(0.1, 0.9, 0.4, 0.1),
+            .emitSquare(x + width / 2, y + width / 2, 16, NParticleEmitter.velocitySpread(width * 2),
+				NColorUtil.randCol(0.9, 0.9, 0.1, 0.1),
 				0.3
 			);
+        
+        if (Math.random() < 0.1) makeGraphic(Std.int(width - 1), Std.int(height - 1), Color.fromFloats(0.9, 0.9, 0.1));
+
+        if (width < 30) {
+            for (i in 0...30)
+            Registry.PS.emitter
+                .emitSquare(x + 2.5, y + 2.5, 16, NParticleEmitter.velocitySpread(width * 2),
+		 	    NColorUtil.randCol(0.9, 0.9, 0.1, 0.1),
+			 	0.3
+			);
+
+            destroy();
+
+            var sloomoo = new Penemy(x + width / 2, y + width / 2);
+            Registry.PS._enemies.add(sloomoo);
+        }
     }
 
     private function movement() {
@@ -56,8 +74,8 @@ class EnemyStage2 extends Enemy {
         velocity.add(posVelocity.x, posVelocity.y);
     }
 
-	private function acquireTarget():EnemyStage1 {
-		var target:EnemyStage1 = null;
+	private function acquireTarget():Shenemy {
+		var target:Shenemy = null;
 		var minDistance = 2;
 		return target;
 	}

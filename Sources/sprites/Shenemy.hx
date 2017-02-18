@@ -13,13 +13,15 @@ import n4.util.NColorUtil;
 
 import n4.effects.particles.NParticleEmitter;
 
-class EnemyStage1 extends Enemy {
+class Shenemy extends Enemy {
     private var speedInaccuracy:Float = Math.random();
     private var speed:Float = 5;
 
     public function new(?X:Float = 0, ?Y:Float = 0) {
         // Define a constructor for Player matching the base constructor
         super(X, Y);
+
+        type = 1;
 
         // Create a 20x20 blue square as the image
 		makeGraphic(40, 40, Color.Blue);
