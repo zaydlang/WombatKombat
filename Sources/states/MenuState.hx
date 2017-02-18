@@ -14,7 +14,11 @@ class MenuState extends NState {
 
 		//Display title
 		var titleText = new NEText(0, NGame.height / 3, "Square Showdown", 60);
-		titleText.screenCenter(NAxes.X);
+		titleText.screenCenter(NAxes.X);   
+
+		 ]
+
+		 
 		add(titleText);
 	
 		// Direct the user
