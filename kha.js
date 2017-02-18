@@ -1887,13 +1887,13 @@ kha_BlobList.prototype = {
 	,__class__: kha_BlobList
 };
 var kha_FontList = function() {
-	this.names = ["Raleway_BlackItalic","Raleway_Black","Raleway_Bold","Raleway_BoldItalic","Raleway_ExtraBold","Raleway_ExtraBoldItalic","Raleway_Italic","Raleway_ExtraLight","Raleway_ExtraLightItalic","Raleway_Light","Raleway_Medium","Raleway_LightItalic","Raleway_MediumItalic","Raleway_Regular","Raleway_SemiBold","Raleway_SemiBoldItalic","Raleway_Thin","Raleway_ThinItalic","Raleway"];
-	this.RalewayDescription = { files : ["Raleway.ttf"], type : "font", name : "Raleway"};
-	this.RalewayName = "Raleway";
-	this.Raleway = null;
+	this.names = ["Raleway_Black","Raleway_BlackItalic","Raleway_Bold","Raleway_BoldItalic","Raleway_ExtraBoldItalic","Raleway_ExtraBold","Raleway_ExtraLight","Raleway_ExtraLightItalic","Raleway_Italic","Raleway_Light","Raleway_LightItalic","Raleway_Medium","Raleway_MediumItalic","Raleway_Regular","Raleway_SemiBold","Raleway_SemiBoldItalic","Raleway_Thin","Raleway","Raleway_ThinItalic"];
 	this.Raleway_ThinItalicDescription = { files : ["Raleway-ThinItalic.ttf"], type : "font", name : "Raleway_ThinItalic"};
 	this.Raleway_ThinItalicName = "Raleway_ThinItalic";
 	this.Raleway_ThinItalic = null;
+	this.RalewayDescription = { files : ["Raleway.ttf"], type : "font", name : "Raleway"};
+	this.RalewayName = "Raleway";
+	this.Raleway = null;
 	this.Raleway_ThinDescription = { files : ["Raleway-Thin.ttf"], type : "font", name : "Raleway_Thin"};
 	this.Raleway_ThinName = "Raleway_Thin";
 	this.Raleway_Thin = null;
@@ -1909,59 +1909,47 @@ var kha_FontList = function() {
 	this.Raleway_MediumItalicDescription = { files : ["Raleway-MediumItalic.ttf"], type : "font", name : "Raleway_MediumItalic"};
 	this.Raleway_MediumItalicName = "Raleway_MediumItalic";
 	this.Raleway_MediumItalic = null;
-	this.Raleway_LightItalicDescription = { files : ["Raleway-LightItalic.ttf"], type : "font", name : "Raleway_LightItalic"};
-	this.Raleway_LightItalicName = "Raleway_LightItalic";
-	this.Raleway_LightItalic = null;
 	this.Raleway_MediumDescription = { files : ["Raleway-Medium.ttf"], type : "font", name : "Raleway_Medium"};
 	this.Raleway_MediumName = "Raleway_Medium";
 	this.Raleway_Medium = null;
+	this.Raleway_LightItalicDescription = { files : ["Raleway-LightItalic.ttf"], type : "font", name : "Raleway_LightItalic"};
+	this.Raleway_LightItalicName = "Raleway_LightItalic";
+	this.Raleway_LightItalic = null;
 	this.Raleway_LightDescription = { files : ["Raleway-Light.ttf"], type : "font", name : "Raleway_Light"};
 	this.Raleway_LightName = "Raleway_Light";
 	this.Raleway_Light = null;
+	this.Raleway_ItalicDescription = { files : ["Raleway-Italic.ttf"], type : "font", name : "Raleway_Italic"};
+	this.Raleway_ItalicName = "Raleway_Italic";
+	this.Raleway_Italic = null;
 	this.Raleway_ExtraLightItalicDescription = { files : ["Raleway-ExtraLightItalic.ttf"], type : "font", name : "Raleway_ExtraLightItalic"};
 	this.Raleway_ExtraLightItalicName = "Raleway_ExtraLightItalic";
 	this.Raleway_ExtraLightItalic = null;
 	this.Raleway_ExtraLightDescription = { files : ["Raleway-ExtraLight.ttf"], type : "font", name : "Raleway_ExtraLight"};
 	this.Raleway_ExtraLightName = "Raleway_ExtraLight";
 	this.Raleway_ExtraLight = null;
-	this.Raleway_ItalicDescription = { files : ["Raleway-Italic.ttf"], type : "font", name : "Raleway_Italic"};
-	this.Raleway_ItalicName = "Raleway_Italic";
-	this.Raleway_Italic = null;
-	this.Raleway_ExtraBoldItalicDescription = { files : ["Raleway-ExtraBoldItalic.ttf"], type : "font", name : "Raleway_ExtraBoldItalic"};
-	this.Raleway_ExtraBoldItalicName = "Raleway_ExtraBoldItalic";
-	this.Raleway_ExtraBoldItalic = null;
 	this.Raleway_ExtraBoldDescription = { files : ["Raleway-ExtraBold.ttf"], type : "font", name : "Raleway_ExtraBold"};
 	this.Raleway_ExtraBoldName = "Raleway_ExtraBold";
 	this.Raleway_ExtraBold = null;
+	this.Raleway_ExtraBoldItalicDescription = { files : ["Raleway-ExtraBoldItalic.ttf"], type : "font", name : "Raleway_ExtraBoldItalic"};
+	this.Raleway_ExtraBoldItalicName = "Raleway_ExtraBoldItalic";
+	this.Raleway_ExtraBoldItalic = null;
 	this.Raleway_BoldItalicDescription = { files : ["Raleway-BoldItalic.ttf"], type : "font", name : "Raleway_BoldItalic"};
 	this.Raleway_BoldItalicName = "Raleway_BoldItalic";
 	this.Raleway_BoldItalic = null;
 	this.Raleway_BoldDescription = { files : ["Raleway-Bold.ttf"], type : "font", name : "Raleway_Bold"};
 	this.Raleway_BoldName = "Raleway_Bold";
 	this.Raleway_Bold = null;
-	this.Raleway_BlackDescription = { files : ["Raleway-Black.ttf"], type : "font", name : "Raleway_Black"};
-	this.Raleway_BlackName = "Raleway_Black";
-	this.Raleway_Black = null;
 	this.Raleway_BlackItalicDescription = { files : ["Raleway-BlackItalic.ttf"], type : "font", name : "Raleway_BlackItalic"};
 	this.Raleway_BlackItalicName = "Raleway_BlackItalic";
 	this.Raleway_BlackItalic = null;
+	this.Raleway_BlackDescription = { files : ["Raleway-Black.ttf"], type : "font", name : "Raleway_Black"};
+	this.Raleway_BlackName = "Raleway_Black";
+	this.Raleway_Black = null;
 };
 $hxClasses["kha.FontList"] = kha_FontList;
 kha_FontList.__name__ = true;
 kha_FontList.prototype = {
-	Raleway_BlackItalic: null
-	,Raleway_BlackItalicName: null
-	,Raleway_BlackItalicDescription: null
-	,Raleway_BlackItalicLoad: function(done) {
-		kha_Assets.loadFont("Raleway_BlackItalic",function(font) {
-			done();
-		});
-	}
-	,Raleway_BlackItalicUnload: function() {
-		this.Raleway_BlackItalic.unload();
-		this.Raleway_BlackItalic = null;
-	}
-	,Raleway_Black: null
+	Raleway_Black: null
 	,Raleway_BlackName: null
 	,Raleway_BlackDescription: null
 	,Raleway_BlackLoad: function(done) {
@@ -1972,6 +1960,18 @@ kha_FontList.prototype = {
 	,Raleway_BlackUnload: function() {
 		this.Raleway_Black.unload();
 		this.Raleway_Black = null;
+	}
+	,Raleway_BlackItalic: null
+	,Raleway_BlackItalicName: null
+	,Raleway_BlackItalicDescription: null
+	,Raleway_BlackItalicLoad: function(done) {
+		kha_Assets.loadFont("Raleway_BlackItalic",function(font) {
+			done();
+		});
+	}
+	,Raleway_BlackItalicUnload: function() {
+		this.Raleway_BlackItalic.unload();
+		this.Raleway_BlackItalic = null;
 	}
 	,Raleway_Bold: null
 	,Raleway_BoldName: null
@@ -1997,18 +1997,6 @@ kha_FontList.prototype = {
 		this.Raleway_BoldItalic.unload();
 		this.Raleway_BoldItalic = null;
 	}
-	,Raleway_ExtraBold: null
-	,Raleway_ExtraBoldName: null
-	,Raleway_ExtraBoldDescription: null
-	,Raleway_ExtraBoldLoad: function(done) {
-		kha_Assets.loadFont("Raleway_ExtraBold",function(font) {
-			done();
-		});
-	}
-	,Raleway_ExtraBoldUnload: function() {
-		this.Raleway_ExtraBold.unload();
-		this.Raleway_ExtraBold = null;
-	}
 	,Raleway_ExtraBoldItalic: null
 	,Raleway_ExtraBoldItalicName: null
 	,Raleway_ExtraBoldItalicDescription: null
@@ -2021,17 +2009,17 @@ kha_FontList.prototype = {
 		this.Raleway_ExtraBoldItalic.unload();
 		this.Raleway_ExtraBoldItalic = null;
 	}
-	,Raleway_Italic: null
-	,Raleway_ItalicName: null
-	,Raleway_ItalicDescription: null
-	,Raleway_ItalicLoad: function(done) {
-		kha_Assets.loadFont("Raleway_Italic",function(font) {
+	,Raleway_ExtraBold: null
+	,Raleway_ExtraBoldName: null
+	,Raleway_ExtraBoldDescription: null
+	,Raleway_ExtraBoldLoad: function(done) {
+		kha_Assets.loadFont("Raleway_ExtraBold",function(font) {
 			done();
 		});
 	}
-	,Raleway_ItalicUnload: function() {
-		this.Raleway_Italic.unload();
-		this.Raleway_Italic = null;
+	,Raleway_ExtraBoldUnload: function() {
+		this.Raleway_ExtraBold.unload();
+		this.Raleway_ExtraBold = null;
 	}
 	,Raleway_ExtraLight: null
 	,Raleway_ExtraLightName: null
@@ -2057,6 +2045,18 @@ kha_FontList.prototype = {
 		this.Raleway_ExtraLightItalic.unload();
 		this.Raleway_ExtraLightItalic = null;
 	}
+	,Raleway_Italic: null
+	,Raleway_ItalicName: null
+	,Raleway_ItalicDescription: null
+	,Raleway_ItalicLoad: function(done) {
+		kha_Assets.loadFont("Raleway_Italic",function(font) {
+			done();
+		});
+	}
+	,Raleway_ItalicUnload: function() {
+		this.Raleway_Italic.unload();
+		this.Raleway_Italic = null;
+	}
 	,Raleway_Light: null
 	,Raleway_LightName: null
 	,Raleway_LightDescription: null
@@ -2069,18 +2069,6 @@ kha_FontList.prototype = {
 		this.Raleway_Light.unload();
 		this.Raleway_Light = null;
 	}
-	,Raleway_Medium: null
-	,Raleway_MediumName: null
-	,Raleway_MediumDescription: null
-	,Raleway_MediumLoad: function(done) {
-		kha_Assets.loadFont("Raleway_Medium",function(font) {
-			done();
-		});
-	}
-	,Raleway_MediumUnload: function() {
-		this.Raleway_Medium.unload();
-		this.Raleway_Medium = null;
-	}
 	,Raleway_LightItalic: null
 	,Raleway_LightItalicName: null
 	,Raleway_LightItalicDescription: null
@@ -2092,6 +2080,18 @@ kha_FontList.prototype = {
 	,Raleway_LightItalicUnload: function() {
 		this.Raleway_LightItalic.unload();
 		this.Raleway_LightItalic = null;
+	}
+	,Raleway_Medium: null
+	,Raleway_MediumName: null
+	,Raleway_MediumDescription: null
+	,Raleway_MediumLoad: function(done) {
+		kha_Assets.loadFont("Raleway_Medium",function(font) {
+			done();
+		});
+	}
+	,Raleway_MediumUnload: function() {
+		this.Raleway_Medium.unload();
+		this.Raleway_Medium = null;
 	}
 	,Raleway_MediumItalic: null
 	,Raleway_MediumItalicName: null
@@ -2153,18 +2153,6 @@ kha_FontList.prototype = {
 		this.Raleway_Thin.unload();
 		this.Raleway_Thin = null;
 	}
-	,Raleway_ThinItalic: null
-	,Raleway_ThinItalicName: null
-	,Raleway_ThinItalicDescription: null
-	,Raleway_ThinItalicLoad: function(done) {
-		kha_Assets.loadFont("Raleway_ThinItalic",function(font) {
-			done();
-		});
-	}
-	,Raleway_ThinItalicUnload: function() {
-		this.Raleway_ThinItalic.unload();
-		this.Raleway_ThinItalic = null;
-	}
 	,Raleway: null
 	,RalewayName: null
 	,RalewayDescription: null
@@ -2176,6 +2164,18 @@ kha_FontList.prototype = {
 	,RalewayUnload: function() {
 		this.Raleway.unload();
 		this.Raleway = null;
+	}
+	,Raleway_ThinItalic: null
+	,Raleway_ThinItalicName: null
+	,Raleway_ThinItalicDescription: null
+	,Raleway_ThinItalicLoad: function(done) {
+		kha_Assets.loadFont("Raleway_ThinItalic",function(font) {
+			done();
+		});
+	}
+	,Raleway_ThinItalicUnload: function() {
+		this.Raleway_ThinItalic.unload();
+		this.Raleway_ThinItalic = null;
 	}
 	,names: null
 	,__class__: kha_FontList
@@ -3995,11 +3995,11 @@ kha_Shaders.init = function() {
 	kha_Shaders.painter_colored_frag = new kha_graphics4_FragmentShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_colored_fragData"))),"painter_colored_frag");
 	kha_Shaders.painter_colored_vert = new kha_graphics4_VertexShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_colored_vertData"))),"painter_colored_vert");
 	kha_Shaders.painter_image_frag = new kha_graphics4_FragmentShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_image_fragData"))),"painter_image_frag");
-	kha_Shaders.painter_image_vert = new kha_graphics4_VertexShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_image_vertData"))),"painter_image_vert");
 	kha_Shaders.painter_text_frag = new kha_graphics4_FragmentShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_text_fragData"))),"painter_text_frag");
+	kha_Shaders.painter_image_vert = new kha_graphics4_VertexShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_image_vertData"))),"painter_image_vert");
 	kha_Shaders.painter_text_vert = new kha_graphics4_VertexShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_text_vertData"))),"painter_text_vert");
-	kha_Shaders.painter_video_frag = new kha_graphics4_FragmentShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_video_fragData"))),"painter_video_frag");
 	kha_Shaders.painter_video_vert = new kha_graphics4_VertexShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_video_vertData"))),"painter_video_vert");
+	kha_Shaders.painter_video_frag = new kha_graphics4_FragmentShader(kha_internal_BytesBlob.fromBytes(haxe_Unserializer.run(Reflect.field(kha_Shaders,"painter_video_fragData"))),"painter_video_frag");
 };
 var kha_Sound = function() {
 };
@@ -23431,22 +23431,6 @@ n4e_ui_NEText.prototype = $extend(n4_entities_NSprite.prototype,{
 	}
 	,__class__: n4e_ui_NEText
 });
-var sprites_BloodDrop = function(X,Y) {
-	if(Y == null) {
-		Y = 0;
-	}
-	if(X == null) {
-		X = 0;
-	}
-	n4_entities_NSprite.call(this,X,Y);
-	this.makeGraphic(5,5,-65536);
-};
-$hxClasses["sprites.BloodDrop"] = sprites_BloodDrop;
-sprites_BloodDrop.__name__ = true;
-sprites_BloodDrop.__super__ = n4_entities_NSprite;
-sprites_BloodDrop.prototype = $extend(n4_entities_NSprite.prototype,{
-	__class__: sprites_BloodDrop
-});
 var sprites_Enemy = function(X,Y,Graphic) {
 	n4_entities_NSprite.call(this,X,Y,Graphic);
 };
@@ -23454,9 +23438,10 @@ $hxClasses["sprites.Enemy"] = sprites_Enemy;
 sprites_Enemy.__name__ = true;
 sprites_Enemy.__super__ = n4_entities_NSprite;
 sprites_Enemy.prototype = $extend(n4_entities_NSprite.prototype,{
-	__class__: sprites_Enemy
+	type: null
+	,__class__: sprites_Enemy
 });
-var sprites_EnemyStage1 = function(X,Y) {
+var sprites_Benemy = function(X,Y) {
 	if(Y == null) {
 		Y = 0;
 	}
@@ -23466,21 +23451,35 @@ var sprites_EnemyStage1 = function(X,Y) {
 	this.speed = 5;
 	this.speedInaccuracy = Math.random();
 	sprites_Enemy.call(this,X,Y);
-	this.makeGraphic(40,40,-16776961);
-	this.drag.set(Math.random() * 4 + 1,Math.random() * 4 + 1);
-	this.maxVelocity.set(Math.random() * 50 + 150,Math.random() * 50 + 150);
-	this.angularVelocity = Math.PI / 2;
+	this.type = 3;
+	this.makeGraphic(60,60,kha__$Color_Color_$Impl_$.fromFloats(0.9,0.9,0.1));
+	this.drag.set(Math.random() * 5 + 30,Math.random() * 5 + 30);
+	this.maxVelocity.set(Math.random() * 50 + 275,Math.random() * 50 + 275);
+	this.angularVelocity = Math.PI * 3;
 };
-$hxClasses["sprites.EnemyStage1"] = sprites_EnemyStage1;
-sprites_EnemyStage1.__name__ = true;
-sprites_EnemyStage1.__super__ = sprites_Enemy;
-sprites_EnemyStage1.prototype = $extend(sprites_Enemy.prototype,{
+$hxClasses["sprites.Benemy"] = sprites_Benemy;
+sprites_Benemy.__name__ = true;
+sprites_Benemy.__super__ = sprites_Enemy;
+sprites_Benemy.prototype = $extend(sprites_Enemy.prototype,{
 	speedInaccuracy: null
 	,speed: null
 	,update: function(dt) {
 		this.movement();
 		sprites_Enemy.prototype.update.call(this,dt);
-		Registry.PS.emitter.emitSquare(this.x + 20,this.y + 20,16,n4_effects_particles_NParticleEmitter.velocitySpread(this.get_width() * 2),n4_util_NColorUtil.randCol(0.1,0.1,0.9,0.1),0.3);
+		Registry.PS.emitter.emitSquare(this.x + this.get_width() / 2,this.y + this.get_width() / 2,16,n4_effects_particles_NParticleEmitter.velocitySpread(this.get_width() * 2),n4_util_NColorUtil.randCol(0.9,0.9,0.1,0.1),0.3);
+		if(Math.random() < 0.1) {
+			this.makeGraphic(this.get_width() - 1 | 0,this.get_height() - 1 | 0,kha__$Color_Color_$Impl_$.fromFloats(0.9,0.9,0.1));
+		}
+		if(this.get_width() < 30) {
+			var _g = 0;
+			while(_g < 30) {
+				++_g;
+				Registry.PS.emitter.emitSquare(this.x + 2.5,this.y + 2.5,16,n4_effects_particles_NParticleEmitter.velocitySpread(this.get_width() * 2),n4_util_NColorUtil.randCol(0.9,0.9,0.1,0.1),0.3);
+			}
+			this.destroy();
+			var sloomoo = new sprites_Penemy(this.x + this.get_width() / 2,this.y + this.get_width() / 2);
+			Registry.PS._enemies.add(sloomoo);
+		}
 	}
 	,movement: function() {
 		var player = Registry.PS.player;
@@ -23490,9 +23489,12 @@ sprites_EnemyStage1.prototype = $extend(sprites_Enemy.prototype,{
 		_this.set_x(_this.x + posVelocity.x);
 		_this.set_y(_this.y + Y);
 	}
-	,__class__: sprites_EnemyStage1
+	,acquireTarget: function() {
+		return null;
+	}
+	,__class__: sprites_Benemy
 });
-var sprites_EnemyStage2 = function(X,Y) {
+var sprites_Penemy = function(X,Y) {
 	if(Y == null) {
 		Y = 0;
 	}
@@ -23502,15 +23504,16 @@ var sprites_EnemyStage2 = function(X,Y) {
 	this.speed = 5;
 	this.speedInaccuracy = Math.random();
 	sprites_Enemy.call(this,X,Y);
+	this.type = 2;
 	this.makeGraphic(5,5,kha__$Color_Color_$Impl_$.fromFloats(0.1,0.9,0.4));
 	this.drag.set(Math.random() * 5 + 30,Math.random() * 5 + 30);
 	this.maxVelocity.set(Math.random() * 50 + 280,Math.random() * 50 + 280);
 	this.angularVelocity = Math.PI / 2;
 };
-$hxClasses["sprites.EnemyStage2"] = sprites_EnemyStage2;
-sprites_EnemyStage2.__name__ = true;
-sprites_EnemyStage2.__super__ = sprites_Enemy;
-sprites_EnemyStage2.prototype = $extend(sprites_Enemy.prototype,{
+$hxClasses["sprites.Penemy"] = sprites_Penemy;
+sprites_Penemy.__name__ = true;
+sprites_Penemy.__super__ = sprites_Enemy;
+sprites_Penemy.prototype = $extend(sprites_Enemy.prototype,{
 	speedInaccuracy: null
 	,speed: null
 	,update: function(dt) {
@@ -23526,10 +23529,7 @@ sprites_EnemyStage2.prototype = $extend(sprites_Enemy.prototype,{
 		_this.set_x(_this.x + posVelocity.x);
 		_this.set_y(_this.y + Y);
 	}
-	,acquireTarget: function() {
-		return null;
-	}
-	,__class__: sprites_EnemyStage2
+	,__class__: sprites_Penemy
 });
 var sprites_Player = function(X,Y) {
 	if(Y == null) {
@@ -23621,6 +23621,43 @@ sprites_Player.prototype = $extend(n4_entities_NSprite.prototype,{
 		}
 	}
 	,__class__: sprites_Player
+});
+var sprites_Shenemy = function(X,Y) {
+	if(Y == null) {
+		Y = 0;
+	}
+	if(X == null) {
+		X = 0;
+	}
+	this.speed = 5;
+	this.speedInaccuracy = Math.random();
+	sprites_Enemy.call(this,X,Y);
+	this.type = 1;
+	this.makeGraphic(40,40,-16776961);
+	this.drag.set(Math.random() * 4 + 1,Math.random() * 4 + 1);
+	this.maxVelocity.set(Math.random() * 50 + 150,Math.random() * 50 + 150);
+	this.angularVelocity = Math.PI / 2;
+};
+$hxClasses["sprites.Shenemy"] = sprites_Shenemy;
+sprites_Shenemy.__name__ = true;
+sprites_Shenemy.__super__ = sprites_Enemy;
+sprites_Shenemy.prototype = $extend(sprites_Enemy.prototype,{
+	speedInaccuracy: null
+	,speed: null
+	,update: function(dt) {
+		this.movement();
+		sprites_Enemy.prototype.update.call(this,dt);
+		Registry.PS.emitter.emitSquare(this.x + 20,this.y + 20,16,n4_effects_particles_NParticleEmitter.velocitySpread(this.get_width() * 2),n4_util_NColorUtil.randCol(0.1,0.1,0.9,0.1),0.3);
+	}
+	,movement: function() {
+		var player = Registry.PS.player;
+		var posVelocity = new n4_math_NVector(this.x,this.y).subtractPoint(new n4_math_NPoint(player.x,player.y)).toVector().normalize().scale(5 * this.speedInaccuracy + this.speed).rotate(new n4_math_NPoint(0,0),180);
+		var _this = this.velocity;
+		var Y = posVelocity.y;
+		_this.set_x(_this.x + posVelocity.x);
+		_this.set_y(_this.y + Y);
+	}
+	,__class__: sprites_Shenemy
 });
 var states_GameOverState = function(Score) {
 	n4_NState.call(this);
@@ -23773,15 +23810,18 @@ states_PlayState.prototype = $extend(n4_NState.prototype,{
 			}
 		});
 		this.spawnTimer += dt;
-		if(this.spawnTimer >= this.spawnTime) {
+		if(this.spawnTimer >= this.spawnTime && this.enemiesKilled < 60) {
 			this.spawnTimer = 0;
-			if(this.enemyCounter < Math.random() * 3 + (this.enemiesKilled < 10 ? 5 : 15)) {
+			if(this.enemyCounter < Math.random() * 3 + (this.enemiesKilled > 10 && this.enemiesKilled < 30 ? 15 : 5)) {
 				if(this.enemiesKilled < 9 || Math.random() >= (this.enemiesKilled - 10) * 0.075 + 0.25) {
-					var shenemy = new sprites_EnemyStage1(n4_NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10,n4_NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10);
+					var shenemy = new sprites_Shenemy(n4_NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10,n4_NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10);
 					this._enemies.add(shenemy);
-				} else {
-					var shenemy1 = new sprites_EnemyStage2(n4_NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10,n4_NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10);
+				} else if(this.enemiesKilled < 30 || Math.random() >= (this.enemiesKilled - 31) * 0.075 + 0.25) {
+					var shenemy1 = new sprites_Penemy(n4_NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10,n4_NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10);
 					this._enemies.add(shenemy1);
+				} else {
+					var shenemy2 = new sprites_Benemy(n4_NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10,n4_NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10);
+					this._enemies.add(shenemy2);
 				}
 				this.enemyCounter++;
 			}
@@ -23826,14 +23866,24 @@ states_PlayState.prototype = $extend(n4_NState.prototype,{
 			Registry.PS.emitter.emitSquare(b.x,b.y,9,n4_effects_particles_NParticleEmitter.velocitySpread(75,p.velocity.x / 2,p.velocity.y / 2),n4_util_NColorUtil.randCol(1,0.1,0),0.8);
 		}
 		this.enemyCounter -= 2;
-		var _g2 = 0;
-		while(_g2 < 50) {
-			++_g2;
-			var spread = n4_effects_particles_NParticleEmitter.velocitySpread(30);
-			this.add(new sprites_BloodDrop(b.x + spread.x,b.y + spread.y));
-		}
 		b.destroy();
 		p.destroy();
+		if(b.type == 3) {
+			var _g2 = 0;
+			while(_g2 < 1) {
+				++_g2;
+				var sloomoo = new sprites_Penemy(b.x + b.get_width() / 2,b.y + b.get_width() / 2);
+				this._enemies.add(sloomoo);
+			}
+		}
+		if(p.type == 3) {
+			var _g3 = 0;
+			while(_g3 < 1) {
+				++_g3;
+				var poomoo = new sprites_Penemy(p.x + p.get_width() / 2,p.y + p.get_width() / 2);
+				this._enemies.add(poomoo);
+			}
+		}
 		this.enemiesKilled += 2;
 	}
 	,__class__: states_PlayState
@@ -23921,11 +23971,11 @@ kha_Scheduler.startTime = 0;
 kha_Shaders.painter_colored_fragData = "s198:I3ZlcnNpb24gMTAwCnByZWNpc2lvbiBtZWRpdW1wIGZsb2F0OwpwcmVjaXNpb24gaGlnaHAgaW50OwoKdmFyeWluZyBoaWdocCB2ZWM0IGZyYWdtZW50Q29sb3I7Cgp2b2lkIG1haW4oKQp7CiAgICBnbF9GcmFnRGF0YVswXSA9IGZyYWdtZW50Q29sb3I7Cn0KCg";
 kha_Shaders.painter_colored_vertData = "s331:I3ZlcnNpb24gMTAwCgp1bmlmb3JtIG1hdDQgcHJvamVjdGlvbk1hdHJpeDsKCmF0dHJpYnV0ZSB2ZWMzIHZlcnRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzQgZnJhZ21lbnRDb2xvcjsKYXR0cmlidXRlIHZlYzQgdmVydGV4Q29sb3I7Cgp2b2lkIG1haW4oKQp7CiAgICBnbF9Qb3NpdGlvbiA9IHByb2plY3Rpb25NYXRyaXggKiB2ZWM0KHZlcnRleFBvc2l0aW9uLCAxLjApOwogICAgZnJhZ21lbnRDb2xvciA9IHZlcnRleENvbG9yOwp9Cgo";
 kha_Shaders.painter_image_fragData = "s471:I3ZlcnNpb24gMTAwCnByZWNpc2lvbiBtZWRpdW1wIGZsb2F0OwpwcmVjaXNpb24gaGlnaHAgaW50OwoKdW5pZm9ybSBoaWdocCBzYW1wbGVyMkQgdGV4OwoKdmFyeWluZyBoaWdocCB2ZWMyIHRleENvb3JkOwp2YXJ5aW5nIGhpZ2hwIHZlYzQgY29sb3I7Cgp2b2lkIG1haW4oKQp7CiAgICBoaWdocCB2ZWM0IHRleGNvbG9yID0gdGV4dHVyZTJEKHRleCwgdGV4Q29vcmQpICogY29sb3I7CiAgICBoaWdocCB2ZWMzIF8zMiA9IHRleGNvbG9yLnh5eiAqIGNvbG9yLnc7CiAgICB0ZXhjb2xvciA9IHZlYzQoXzMyLngsIF8zMi55LCBfMzIueiwgdGV4Y29sb3Iudyk7CiAgICBnbF9GcmFnRGF0YVswXSA9IHRleGNvbG9yOwp9Cgo";
-kha_Shaders.painter_image_vertData = "s415:I3ZlcnNpb24gMTAwCgp1bmlmb3JtIG1hdDQgcHJvamVjdGlvbk1hdHJpeDsKCmF0dHJpYnV0ZSB2ZWMzIHZlcnRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzIgdGV4Q29vcmQ7CmF0dHJpYnV0ZSB2ZWMyIHRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzQgY29sb3I7CmF0dHJpYnV0ZSB2ZWM0IHZlcnRleENvbG9yOwoKdm9pZCBtYWluKCkKewogICAgZ2xfUG9zaXRpb24gPSBwcm9qZWN0aW9uTWF0cml4ICogdmVjNCh2ZXJ0ZXhQb3NpdGlvbiwgMS4wKTsKICAgIHRleENvb3JkID0gdGV4UG9zaXRpb247CiAgICBjb2xvciA9IHZlcnRleENvbG9yOwp9Cgo";
 kha_Shaders.painter_text_fragData = "s351:I3ZlcnNpb24gMTAwCnByZWNpc2lvbiBtZWRpdW1wIGZsb2F0OwpwcmVjaXNpb24gaGlnaHAgaW50OwoKdW5pZm9ybSBoaWdocCBzYW1wbGVyMkQgdGV4OwoKdmFyeWluZyBoaWdocCB2ZWM0IGZyYWdtZW50Q29sb3I7CnZhcnlpbmcgaGlnaHAgdmVjMiB0ZXhDb29yZDsKCnZvaWQgbWFpbigpCnsKICAgIGdsX0ZyYWdEYXRhWzBdID0gdmVjNChmcmFnbWVudENvbG9yLnh5eiwgdGV4dHVyZTJEKHRleCwgdGV4Q29vcmQpLnggKiBmcmFnbWVudENvbG9yLncpOwp9Cgo";
+kha_Shaders.painter_image_vertData = "s415:I3ZlcnNpb24gMTAwCgp1bmlmb3JtIG1hdDQgcHJvamVjdGlvbk1hdHJpeDsKCmF0dHJpYnV0ZSB2ZWMzIHZlcnRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzIgdGV4Q29vcmQ7CmF0dHJpYnV0ZSB2ZWMyIHRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzQgY29sb3I7CmF0dHJpYnV0ZSB2ZWM0IHZlcnRleENvbG9yOwoKdm9pZCBtYWluKCkKewogICAgZ2xfUG9zaXRpb24gPSBwcm9qZWN0aW9uTWF0cml4ICogdmVjNCh2ZXJ0ZXhQb3NpdGlvbiwgMS4wKTsKICAgIHRleENvb3JkID0gdGV4UG9zaXRpb247CiAgICBjb2xvciA9IHZlcnRleENvbG9yOwp9Cgo";
 kha_Shaders.painter_text_vertData = "s436:I3ZlcnNpb24gMTAwCgp1bmlmb3JtIG1hdDQgcHJvamVjdGlvbk1hdHJpeDsKCmF0dHJpYnV0ZSB2ZWMzIHZlcnRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzIgdGV4Q29vcmQ7CmF0dHJpYnV0ZSB2ZWMyIHRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzQgZnJhZ21lbnRDb2xvcjsKYXR0cmlidXRlIHZlYzQgdmVydGV4Q29sb3I7Cgp2b2lkIG1haW4oKQp7CiAgICBnbF9Qb3NpdGlvbiA9IHByb2plY3Rpb25NYXRyaXggKiB2ZWM0KHZlcnRleFBvc2l0aW9uLCAxLjApOwogICAgdGV4Q29vcmQgPSB0ZXhQb3NpdGlvbjsKICAgIGZyYWdtZW50Q29sb3IgPSB2ZXJ0ZXhDb2xvcjsKfQoK";
-kha_Shaders.painter_video_fragData = "s471:I3ZlcnNpb24gMTAwCnByZWNpc2lvbiBtZWRpdW1wIGZsb2F0OwpwcmVjaXNpb24gaGlnaHAgaW50OwoKdW5pZm9ybSBoaWdocCBzYW1wbGVyMkQgdGV4OwoKdmFyeWluZyBoaWdocCB2ZWMyIHRleENvb3JkOwp2YXJ5aW5nIGhpZ2hwIHZlYzQgY29sb3I7Cgp2b2lkIG1haW4oKQp7CiAgICBoaWdocCB2ZWM0IHRleGNvbG9yID0gdGV4dHVyZTJEKHRleCwgdGV4Q29vcmQpICogY29sb3I7CiAgICBoaWdocCB2ZWMzIF8zMiA9IHRleGNvbG9yLnh5eiAqIGNvbG9yLnc7CiAgICB0ZXhjb2xvciA9IHZlYzQoXzMyLngsIF8zMi55LCBfMzIueiwgdGV4Y29sb3Iudyk7CiAgICBnbF9GcmFnRGF0YVswXSA9IHRleGNvbG9yOwp9Cgo";
 kha_Shaders.painter_video_vertData = "s415:I3ZlcnNpb24gMTAwCgp1bmlmb3JtIG1hdDQgcHJvamVjdGlvbk1hdHJpeDsKCmF0dHJpYnV0ZSB2ZWMzIHZlcnRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzIgdGV4Q29vcmQ7CmF0dHJpYnV0ZSB2ZWMyIHRleFBvc2l0aW9uOwp2YXJ5aW5nIHZlYzQgY29sb3I7CmF0dHJpYnV0ZSB2ZWM0IHZlcnRleENvbG9yOwoKdm9pZCBtYWluKCkKewogICAgZ2xfUG9zaXRpb24gPSBwcm9qZWN0aW9uTWF0cml4ICogdmVjNCh2ZXJ0ZXhQb3NpdGlvbiwgMS4wKTsKICAgIHRleENvb3JkID0gdGV4UG9zaXRpb247CiAgICBjb2xvciA9IHZlcnRleENvbG9yOwp9Cgo";
+kha_Shaders.painter_video_fragData = "s471:I3ZlcnNpb24gMTAwCnByZWNpc2lvbiBtZWRpdW1wIGZsb2F0OwpwcmVjaXNpb24gaGlnaHAgaW50OwoKdW5pZm9ybSBoaWdocCBzYW1wbGVyMkQgdGV4OwoKdmFyeWluZyBoaWdocCB2ZWMyIHRleENvb3JkOwp2YXJ5aW5nIGhpZ2hwIHZlYzQgY29sb3I7Cgp2b2lkIG1haW4oKQp7CiAgICBoaWdocCB2ZWM0IHRleGNvbG9yID0gdGV4dHVyZTJEKHRleCwgdGV4Q29vcmQpICogY29sb3I7CiAgICBoaWdocCB2ZWMzIF8zMiA9IHRleGNvbG9yLnh5eiAqIGNvbG9yLnc7CiAgICB0ZXhjb2xvciA9IHZlYzQoXzMyLngsIF8zMi55LCBfMzIueiwgdGV4Y29sb3Iudyk7CiAgICBnbF9GcmFnRGF0YVswXSA9IHRleGNvbG9yOwp9Cgo";
 kha_System.renderListeners = [];
 kha_System.foregroundListeners = [];
 kha_System.resumeListeners = [];
