@@ -12,7 +12,8 @@ import n4.effects.particles.NParticleEmitter;
 
 class Player extends NSprite {
     private var speed:Float = 10;
-
+    private var maxVelocityTimer:Float = 5;
+    public var spedUp:Bool = false;
     public function new(?X:Float = 0, ?Y:Float = 0) {
         // Define a constructor for Player matching the base constructor
         super(X, Y);
@@ -37,6 +38,8 @@ class Player extends NSprite {
 
         // call our movement function
         movement();
+
+        maxVelocityTimer += dt;
         // call the base update
         super.update(dt);
     }
@@ -51,6 +54,27 @@ class Player extends NSprite {
         down = NGame.keys.pressed(["DOWN", "S"]);
         left = NGame.keys.pressed(["LEFT", "A"]);
         right = NGame.keys.pressed(["RIGHT", "D"]);
+
+        var speedUp:Bool = NGame.keys.pressed(["SPACE", " "]);
+
+        if (speedUp && maxVelocityTimer > 5) {
+            maxVelocity.set(400, 400);
+
+            for (i in 0...30) 
+                Registry.PS.emitter
+                    .emitSquare(x + 10, y + 10, 8, NParticleEmitter.velocitySpread(300),
+                    NColorUtil.randCol(0.9, 0.9, 0.1, 0.3),
+                    0.3
+                );
+
+            maxVelocityTimer = 0;
+            spedUp = true;
+        }
+
+        if (spedUp && maxVelocityTimer > 1) {
+            maxVelocity.set(200, 200);
+            spedUp = false;
+        }
 
         if (up || down || left || right)
         {
