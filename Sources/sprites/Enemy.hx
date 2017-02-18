@@ -39,8 +39,8 @@ class Enemy extends NSprite {
         super.update(dt);
 
         Registry.PS.emitter
-            .emitSquare(x + 20, y + 20, 16, NParticleEmitter.velocitySpread(50),
-				NColorUtil.randCol(0, 255, 0),
+            .emitSquare(x + 20, y + 20, 16, NParticleEmitter.velocitySpread(width * 2),
+				NColorUtil.randCol(0.1, 0.1, 0.9, 0.1),
 				0.3
 			);
     }
