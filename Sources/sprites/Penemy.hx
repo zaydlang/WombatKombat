@@ -57,10 +57,4 @@ class Penemy extends Enemy {
             .rotate(new NPoint(0, 0), 180);
         velocity.add(posVelocity.x, posVelocity.y);
     }
-
-	private function acquireTarget():EnemyStage1 {
-		var target:EnemyStage1 = null;
-		var minDistance = 2;
-		return target;
-	}
 }

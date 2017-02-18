@@ -64,16 +64,19 @@ class PlayState extends NState {
 		});
 
 		spawnTimer += dt;
-		if (spawnTimer >= spawnTime) {
+		if (spawnTimer >= spawnTime && enemiesKilled < 60) {
 			spawnTimer = 0;
-			if (enemyCounter < Math.random() * 3 + (enemiesKilled < 10 ? 5
-			 : 15)) {
+			if (enemyCounter < Math.random() * 3 + (enemiesKilled > 10 && enemiesKilled < 30 ? 15 : 5)) {
 				if (enemiesKilled < 9 || Math.random() >= ((enemiesKilled - 10) * 0.075) + 0.25) {
-					var shenemy = new EnemyStage3(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
+					var shenemy = new Shenemy(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
+						NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10); // don't ask about shenemy
+					_enemies.add(shenemy);
+				} else if (enemiesKilled < 30 || Math.random() >= ((enemiesKilled - 31) * 0.075) + 0.25) {
+					var shenemy = new Penemy(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
 						NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10); // don't ask about shenemy
 					_enemies.add(shenemy);
 				} else {
-					var shenemy = new Penemy(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
+					var shenemy = new Benemy(NGame.width * (Math.random() > 0.5 ? 1 : 9) / 10, 
 						NGame.height * (Math.random() > 0.5 ? 1 : 9) / 10); // don't ask about shenemy
 					_enemies.add(shenemy); 
 				}
@@ -144,23 +147,28 @@ class PlayState extends NState {
 
 		enemyCounter -= 2;
 
+/*
 		for (i in 0...50) {
 			var spread = NParticleEmitter.velocitySpread(30);
 			var shlood = new BloodDrop(b.x + spread.x, b.y + spread.y);
 			add(shlood); 
 		}
-
+*/
 		b.destroy();
 		p.destroy();
 
 		if (b.type == 3) {
-			var sloomoo = new Penemy(b.x + b.width / 2, b.y + b.width / 2);
-            _enemies.add(sloomoo);
+			for (i in 0...1) {
+				var sloomoo = new Penemy(b.x + b.width / 2, b.y + b.width / 2);
+				_enemies.add(sloomoo);
+			}
 		}
 
 		if (p.type == 3) {
-			var poomoo = new Penemy(p.x + p.width / 2, p.y + p.width / 2);
-            _enemies.add(poomoo);
+			for (i in 0...1) {
+				var poomoo = new Penemy(p.x + p.width / 2, p.y + p.width / 2);
+				_enemies.add(poomoo);
+			}
 		}
 
 		enemiesKilled += 2;

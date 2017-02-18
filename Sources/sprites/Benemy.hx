@@ -13,7 +13,7 @@ import n4.util.NColorUtil;
 
 import n4.effects.particles.NParticleEmitter;
 
-class EnemyStage3 extends Enemy {
+class Benemy extends Enemy {
     private var speedInaccuracy:Float = Math.random();
     private var speed:Float = 5;
 
